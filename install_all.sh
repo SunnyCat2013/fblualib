@@ -104,7 +104,7 @@ echo
 
 cd $dir/folly/folly
 autoreconf -ivf
-./configure
+./configure --with-boost=$BOOST_ROOT/lib
 make
 sudo make install
 sudo ldconfig # reload the lib paths after freshly installed folly. fbthrift needs it.
